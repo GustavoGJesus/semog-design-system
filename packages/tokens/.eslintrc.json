@@ -1,0 +1,3 @@
+{
+  "extends": "@semog-ui/eslint-config"
+}

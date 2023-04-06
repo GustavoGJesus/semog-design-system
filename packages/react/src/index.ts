@@ -1,3 +1,3 @@
-import { colors } from "@semog-ui/tokens"
+import { colors } from '@semog-ui/tokens'
 
-console.log(colors); 
+console.log(colors)
