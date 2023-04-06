@@ -1,1 +1,3 @@
-console.log("hello world!");
+import { colors } from "@semog-ui/tokens"
+
+console.log(colors); 
