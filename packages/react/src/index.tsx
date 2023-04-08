@@ -1,13 +1,9 @@
 import { styled } from './styles'
-import React from 'react'
 
-const Button = styled('button', {
+export const Button = styled('button', {
   fontFamily: '$default',
-  background: '$ignite500',
+  background: '$green',
   borderRadius: '$md',
   padding: '$4',
+  cursor: 'pointer',
 })
-
-export function App() {
-  return <Button>Hello world!</Button>
-}

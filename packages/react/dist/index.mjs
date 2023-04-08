@@ -61,7 +61,7 @@ var lineHeights = {
 };
 
 // src/styles/index.ts
-import { createStitches } from "@stitches/react";
+import { createStitches, defaultThemeMap } from "@stitches/react";
 var {
   styled,
   css,
@@ -72,7 +72,11 @@ var {
   createTheme,
   config
 } = createStitches({
-  themeMap: {},
+  themeMap: {
+    ...defaultThemeMap,
+    height: "space",
+    width: "space"
+  },
   theme: {
     colors,
     fontSizes,
@@ -85,15 +89,13 @@ var {
 });
 
 // src/index.tsx
-import React from "react";
 var Button = styled("button", {
   fontFamily: "$default",
-  background: "$ignite500",
-  borderRadius: "$md"
+  background: "$green",
+  borderRadius: "$md",
+  padding: "$4",
+  cursor: "pointer"
 });
-function App() {
-  return /* @__PURE__ */ React.createElement(Button, null, "Hello world!");
-}
 export {
-  App
+  Button
 };
