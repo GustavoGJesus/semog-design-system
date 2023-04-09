@@ -1,6 +1,7 @@
 // src/colors.ts
 var colors = {
   white: "#FFFFFF",
+  black: "#000000",
   green: "#00D69D",
   blue: "#133A6E"
 };
@@ -36,7 +37,7 @@ var radii = {
 
 // src/fonts.ts
 var fonts = {
-  default: "Roboto, sans-serif",
+  default: "Manrope, sans-serif",
   code: "monospace"
 };
 
