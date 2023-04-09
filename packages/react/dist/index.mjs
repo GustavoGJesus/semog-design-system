@@ -185,9 +185,75 @@ var AvatarFallBack = styled(Avatar.Fallback, {
 function Avatar2(props) {
   return /* @__PURE__ */ React.createElement(AvatarContainer, null, /* @__PURE__ */ React.createElement(AvatarImage, { ...props }), /* @__PURE__ */ React.createElement(AvatarFallBack, { delayMs: 600 }, /* @__PURE__ */ React.createElement(User, null)));
 }
+
+// src/components/Button.tsx
+var Button = styled("button", {
+  all: "unset",
+  borderRadius: "$sm",
+  fontSize: "$sm",
+  padding: "0 $4",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  textAlign: "center",
+  minWidth: 120,
+  boxSizing: "border-box",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "$2",
+  cursor: "pointer",
+  svg: {
+    width: "$4",
+    height: "$4"
+  },
+  variants: {
+    variant: {
+      primary: {
+        color: "$white",
+        backgroundColor: "$green",
+        "&:not(:disabled):hover": {
+          transition: "backgroundColor 0.1s"
+        },
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      },
+      secondary: {
+        color: "$green",
+        backgroundColor: "transparent",
+        border: "1px solid $green",
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      },
+      tertiary: {
+        color: "$blue",
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      }
+    },
+    size: {
+      sm: {
+        height: 38
+      },
+      md: {
+        height: 46
+      }
+    }
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "md"
+  }
+});
 export {
   Avatar2 as Avatar,
   Box,
+  Button,
   Heading,
   Text
 };

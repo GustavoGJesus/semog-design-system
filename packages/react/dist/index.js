@@ -32,6 +32,7 @@ var src_exports = {};
 __export(src_exports, {
   Avatar: () => Avatar2,
   Box: () => Box,
+  Button: () => Button,
   Heading: () => Heading,
   Text: () => Text
 });
@@ -224,10 +225,76 @@ var AvatarFallBack = styled(Avatar.Fallback, {
 function Avatar2(props) {
   return /* @__PURE__ */ import_react2.default.createElement(AvatarContainer, null, /* @__PURE__ */ import_react2.default.createElement(AvatarImage, { ...props }), /* @__PURE__ */ import_react2.default.createElement(AvatarFallBack, { delayMs: 600 }, /* @__PURE__ */ import_react2.default.createElement(import_phosphor_react.User, null)));
 }
+
+// src/components/Button.tsx
+var Button = styled("button", {
+  all: "unset",
+  borderRadius: "$sm",
+  fontSize: "$sm",
+  padding: "0 $4",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  textAlign: "center",
+  minWidth: 120,
+  boxSizing: "border-box",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "$2",
+  cursor: "pointer",
+  svg: {
+    width: "$4",
+    height: "$4"
+  },
+  variants: {
+    variant: {
+      primary: {
+        color: "$white",
+        backgroundColor: "$green",
+        "&:not(:disabled):hover": {
+          transition: "backgroundColor 0.1s"
+        },
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      },
+      secondary: {
+        color: "$green",
+        backgroundColor: "transparent",
+        border: "1px solid $green",
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      },
+      tertiary: {
+        color: "$blue",
+        "&:disabled": {
+          backgroundColor: "#C4C4C4",
+          cursor: "not-allowed"
+        }
+      }
+    },
+    size: {
+      sm: {
+        height: 38
+      },
+      md: {
+        height: 46
+      }
+    }
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "md"
+  }
+});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
   Box,
+  Button,
   Heading,
   Text
 });
