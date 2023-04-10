@@ -1,6 +1,7 @@
 // ../tokens/dist/index.mjs
 var colors = {
   white: "#FFFFFF",
+  gray200: "#E0E0E0",
   black: "#000000",
   green: "#00D69D",
   blue: "#133A6E"
@@ -250,10 +251,61 @@ var Button = styled("button", {
     size: "md"
   }
 });
+
+// src/components/text-input/index.tsx
+import React2 from "react";
+
+// src/components/text-input/styles.ts
+var TextInputContainer = styled("div", {
+  backgroundColor: "$green",
+  padding: "$3 $4",
+  borderRadius: "$small",
+  boxSizing: "border-box",
+  border: "2px solid #gray200",
+  display: "flex",
+  alignItems: "baseLine",
+  "&:has(input:focus)": {
+    borderColor: "$blue"
+  },
+  "&:has(input: disabled)": {
+    opacity: 0.5,
+    cursor: "not-allowed"
+  }
+});
+var Prefix = styled("span", {
+  fontFamily: "$default",
+  fontSize: "$small",
+  color: "$blue",
+  fontWeight: "$regular"
+});
+var Input = styled("input", {
+  fontFamily: "$default",
+  fontSize: "$small",
+  color: "$white",
+  fontWeight: "$regular",
+  background: "transparent",
+  border: 0,
+  width: "100%",
+  "&:focus": {
+    outline: 0
+  },
+  "&:disabled": {
+    cursor: "not-allowed"
+  },
+  "&:placeholder": {
+    color: "$blue"
+  }
+});
+
+// src/components/text-input/index.tsx
+function TextInput({ prefix, ...props }) {
+  return /* @__PURE__ */ React2.createElement(TextInputContainer, null, !!prefix && /* @__PURE__ */ React2.createElement(Prefix, null, prefix), /* @__PURE__ */ React2.createElement(Input, { ...props }));
+}
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Heading,
-  Text
+  Text,
+  TextInput
 };

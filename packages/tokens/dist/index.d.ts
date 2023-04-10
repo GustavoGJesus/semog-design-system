@@ -1,5 +1,6 @@
 declare const colors: {
     white: string;
+    gray200: string;
     black: string;
     green: string;
     blue: string;
