@@ -140,6 +140,7 @@ var Box = styled("div", {
   background: "$green",
   color: "$white"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -168,6 +169,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -191,6 +193,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 var import_react2 = __toESM(require("react"));
@@ -229,6 +232,7 @@ var AvatarFallBack = styled(Avatar.Fallback, {
 function Avatar2(props) {
   return /* @__PURE__ */ import_react2.default.createElement(AvatarContainer, null, /* @__PURE__ */ import_react2.default.createElement(AvatarImage, { ...props }), /* @__PURE__ */ import_react2.default.createElement(AvatarFallBack, { delayMs: 600 }, /* @__PURE__ */ import_react2.default.createElement(import_phosphor_react.User, null)));
 }
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -294,6 +298,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/text-input/index.tsx
 var import_react3 = __toESM(require("react"));
@@ -344,6 +349,7 @@ var Input = styled("input", {
 function TextInput({ prefix, ...props }) {
   return /* @__PURE__ */ import_react3.default.createElement(TextInputContainer, null, !!prefix && /* @__PURE__ */ import_react3.default.createElement(Prefix, null, prefix), /* @__PURE__ */ import_react3.default.createElement(Input, { ...props }));
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 var import_react4 = require("@stitches/react");
@@ -365,6 +371,7 @@ var TextArea = (0, import_react4.styled)("textarea", {
     color: "$gray200"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 var import_react5 = __toESM(require("react"));
@@ -425,6 +432,7 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 function Checkbox2(props) {
   return /* @__PURE__ */ import_react5.default.createElement(CheckboxContainer, { ...props }, /* @__PURE__ */ import_react5.default.createElement(CheckboxIndicator, { asChild: true }, /* @__PURE__ */ import_react5.default.createElement(import_phosphor_react2.Check, { weight: "bold" })));
 }
+Checkbox2.displayName = "Checkbox";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,

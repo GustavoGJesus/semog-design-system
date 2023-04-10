@@ -97,6 +97,7 @@ var Box = styled("div", {
   background: "$green",
   color: "$white"
 });
+Box.displayName = "Box";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -125,6 +126,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -148,6 +150,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 import React from "react";
@@ -186,6 +189,7 @@ var AvatarFallBack = styled(Avatar.Fallback, {
 function Avatar2(props) {
   return /* @__PURE__ */ React.createElement(AvatarContainer, null, /* @__PURE__ */ React.createElement(AvatarImage, { ...props }), /* @__PURE__ */ React.createElement(AvatarFallBack, { delayMs: 600 }, /* @__PURE__ */ React.createElement(User, null)));
 }
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -251,6 +255,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/text-input/index.tsx
 import React2 from "react";
@@ -301,6 +306,7 @@ var Input = styled("input", {
 function TextInput({ prefix, ...props }) {
   return /* @__PURE__ */ React2.createElement(TextInputContainer, null, !!prefix && /* @__PURE__ */ React2.createElement(Prefix, null, prefix), /* @__PURE__ */ React2.createElement(Input, { ...props }));
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextArea.tsx
 import { styled as styled2 } from "@stitches/react";
@@ -322,6 +328,7 @@ var TextArea = styled2("textarea", {
     color: "$gray200"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 import React3 from "react";
@@ -382,6 +389,7 @@ var CheckboxIndicator = styled(Checkbox.Indicator, {
 function Checkbox2(props) {
   return /* @__PURE__ */ React3.createElement(CheckboxContainer, { ...props }, /* @__PURE__ */ React3.createElement(CheckboxIndicator, { asChild: true }, /* @__PURE__ */ React3.createElement(Check, { weight: "bold" })));
 }
+Checkbox2.displayName = "Checkbox";
 export {
   Avatar2 as Avatar,
   Box,
