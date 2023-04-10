@@ -35,6 +35,7 @@ __export(src_exports, {
   Button: () => Button,
   Heading: () => Heading,
   Text: () => Text,
+  TextArea: () => TextArea,
   TextInput: () => TextInput
 });
 module.exports = __toCommonJS(src_exports);
@@ -342,6 +343,27 @@ var Input = styled("input", {
 function TextInput({ prefix, ...props }) {
   return /* @__PURE__ */ import_react3.default.createElement(TextInputContainer, null, !!prefix && /* @__PURE__ */ import_react3.default.createElement(Prefix, null, prefix), /* @__PURE__ */ import_react3.default.createElement(Input, { ...props }));
 }
+
+// src/components/TextArea.tsx
+var import_react4 = require("@stitches/react");
+var TextArea = (0, import_react4.styled)("textarea", {
+  backgroundColor: "$green",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid #gray200",
+  fontFamily: "$default",
+  fontWeight: "$regular",
+  resize: "vertical",
+  minHeight: 80,
+  "&:focus": {
+    borderColor: "$blue",
+    outline: 0
+  },
+  "&:placeholder": {
+    color: "$gray200"
+  }
+});
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -349,5 +371,6 @@ function TextInput({ prefix, ...props }) {
   Button,
   Heading,
   Text,
+  TextArea,
   TextInput
 });

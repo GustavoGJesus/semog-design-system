@@ -301,11 +301,33 @@ var Input = styled("input", {
 function TextInput({ prefix, ...props }) {
   return /* @__PURE__ */ React2.createElement(TextInputContainer, null, !!prefix && /* @__PURE__ */ React2.createElement(Prefix, null, prefix), /* @__PURE__ */ React2.createElement(Input, { ...props }));
 }
+
+// src/components/TextArea.tsx
+import { styled as styled2 } from "@stitches/react";
+var TextArea = styled2("textarea", {
+  backgroundColor: "$green",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid #gray200",
+  fontFamily: "$default",
+  fontWeight: "$regular",
+  resize: "vertical",
+  minHeight: 80,
+  "&:focus": {
+    borderColor: "$blue",
+    outline: 0
+  },
+  "&:placeholder": {
+    color: "$gray200"
+  }
+});
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Heading,
   Text,
+  TextArea,
   TextInput
 };
